@@ -1,4 +1,50 @@
 import React from "react";
+import styled from 'styled-components'
+
+
+const StyledForm = styled.div`
+
+div{
+    background-color:white;;
+    color:black;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+input{
+    border-radius:15px;
+    text-align:center;
+    outline:none;
+}
+select{
+    border-radius:15px;
+    text-align:center;
+    outline:none;
+}
+label{
+    margin:2% 0;
+    
+  
+
+}
+
+
+button{
+    width:7rem;
+    border-radius:15px;
+
+    &:hover{
+        transform: scale(1.5);
+        transition:transform 0.5s;
+      }
+      transition:transform 0.5s;
+
+}
+`
+
+
 function Form(props) {
   //Exact props Form needs
   const { values, update, submit } = props;
@@ -15,7 +61,7 @@ function Form(props) {
   }
 
   return (
-    <form className="form container" onSubmit={onSubmit}>
+    <StyledForm className="form container" onSubmit={onSubmit}>
       <div className="form-div inputs">
         <label>
           Username
@@ -74,7 +120,7 @@ function Form(props) {
           <button>Submit</button>
         </div>
       </div>
-    </form>
+    </StyledForm>
   );
 }
 export default Form;

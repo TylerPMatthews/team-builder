@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Form from "./Components/Form";
 import axios from "axios";
+import styled from 'styled-components';
 
+const StyledApp = styled.div`
+h1{
+text-align:center;
+margin:5% 0;
+}
+
+`
 
 const initialFormValues = {
   //Text imputs
@@ -54,11 +62,11 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <StyledApp className="container">
       <h1>Here is my Team Builder</h1>
 
       <Form values={formValues} update={updateForm} submit={submitForm} />
-    </div>
+    </StyledApp>
   );
 }
 
